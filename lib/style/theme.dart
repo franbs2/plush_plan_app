@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 final themeDefault = ThemeData(
     colorScheme: ColorScheme.fromSeed(
-  seedColor: Color(0xF9F5F4),
-  onPrimary: Color(0xFF26185),
-  secondary: Color(0xFFEDAE),
-  onSecondary: Color(0x8C8E91),
+  seedColor: const Color(0xF9F5F4),
+  onPrimary: const Color(0xFF26185),
+  secondary: const Color(0xFFEDAE),
+  onSecondary: const Color(0x8C8E91),
   onSurface: Colors.white,
 ));
