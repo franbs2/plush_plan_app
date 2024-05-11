@@ -1,3 +1,4 @@
+import 'package:app_plush_pan/style/theme.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,10 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+      theme: themeDefault,
       home: const MyHomePage(),
     );
   }
@@ -30,9 +28,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-      ),
+      appBar: AppBar(),
       body: Center(),
     );
   }
