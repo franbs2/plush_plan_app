@@ -26,14 +26,10 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFf26185),
+      backgroundColor: Color(0xFFA2D5AB),
       appBar: AppBar(
         backgroundColor: Colors.transparent,
-        leading: const Icon(Icons.arrow_back, color: Color(0xFFF9F5F4)),
-        title: const WidgetTitle(
-          title: 'To do Categories',
-          color: Color(0xFFF9F5F4),
-        ),
+        title: Image.asset('assets/logo.png', width: 260),
         centerTitle: true,
       ),
       body: Column(

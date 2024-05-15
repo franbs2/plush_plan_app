@@ -15,10 +15,10 @@ class WidgetCard extends StatelessWidget {
   const WidgetCard(
       {super.key,
       required this.categories,
-      this.color = const Color(0xFFFFEDAE),
+      this.color = const Color(0xFFA8E6FF),
       this.sizeIcon = 48,
-      this.colorIcon = const Color(0xFF595858),
-      this.colorTitle = const Color(0xFF595858),
+      this.colorIcon = const Color(0xFF333333),
+      this.colorTitle = const Color(0xFF333333),
       this.sizeTitle = 18,
       this.colorText = const Color(0xFF595858),
       this.sizeText = 16});
