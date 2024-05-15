@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class WidgetSearch extends StatelessWidget {
-  final Color colorSearch;
-  final Color colorInput;
+  final Color? colorSearch;
+  final Color? colorInput;
   final String hintText;
   final Icon icon;
   final double sizeIcon;
@@ -11,8 +11,8 @@ class WidgetSearch extends StatelessWidget {
 
   const WidgetSearch(
       {super.key,
-      this.colorSearch = const Color(0xFFF9F5F4),
-      this.colorInput = const Color(0xFF595858),
+      this.colorSearch,
+      this.colorInput,
       this.hintText = 'Search',
       this.icon = const Icon(Icons.search),
       this.sizeIcon = 28,
@@ -21,14 +21,15 @@ class WidgetSearch extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final ColorScheme colorScheme = Theme.of(context).colorScheme;
     return Padding(
         padding: const EdgeInsets.all(24.0),
         child: TextField(
           onChanged: onTextChanged,
-          style: TextStyle(color: colorInput),
+          style: TextStyle(color: colorInput ?? colorScheme.onBackground),
           decoration: InputDecoration(
             filled: true,
-            fillColor: colorSearch,
+            fillColor: colorSearch ?? colorScheme.onPrimary,
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(24.0),
               borderSide: BorderSide.none,

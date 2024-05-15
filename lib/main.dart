@@ -1,5 +1,5 @@
 import 'package:app_plush_pan/screen/pages/home_page.dart';
-import 'package:app_plush_pan/style/theme.dart';
+import 'package:app_plush_pan/style/app_theme.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: themeDefault,
+      theme: AppTheme.themeData,
       home: const MyHomePage(),
     );
   }

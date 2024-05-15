@@ -4,31 +4,33 @@ import 'package:flutter/material.dart';
 
 class WidgetCard extends StatelessWidget {
   final Categories categories;
-  final Color color;
+  final Color? color;
   final double sizeIcon;
-  final Color colorIcon;
-  final Color colorTitle;
+  final Color? colorIcon;
+  final Color? colorTitle;
   final double sizeTitle;
-  final Color colorText;
+  final Color? colorText;
   final double sizeText;
 
   const WidgetCard(
       {super.key,
       required this.categories,
-      this.color = const Color(0xFFA8E6FF),
+      this.color,
       this.sizeIcon = 48,
-      this.colorIcon = const Color(0xFF333333),
-      this.colorTitle = const Color(0xFF333333),
+      this.colorIcon,
+      this.colorTitle,
       this.sizeTitle = 18,
-      this.colorText = const Color(0xFF595858),
+      this.colorText,
       this.sizeText = 16});
 
   @override
   Widget build(BuildContext context) {
+    final ColorScheme colorScheme = Theme.of(context).colorScheme;
+
     return Padding(
       padding: const EdgeInsets.only(left: 8.0, right: 8.0),
       child: Card(
-        color: color,
+        color: color ?? colorScheme.secondaryContainer,
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -39,15 +41,20 @@ class WidgetCard extends StatelessWidget {
                 color: colorIcon,
               ),
               WidgetTitle(
-                  title: categories.name, color: colorTitle, size: sizeTitle),
+                  title: categories.name,
+                  color: color ?? colorScheme.onSecondary,
+                  size: sizeTitle),
               const SizedBox(height: 8),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(Icons.schedule, color: colorText),
+                  Icon(Icons.schedule,
+                      color: colorText ?? colorScheme.onBackground),
                   const SizedBox(width: 8),
                   Text('${categories.qntItems} itens',
-                      style: TextStyle(color: colorText, fontSize: sizeText)),
+                      style: TextStyle(
+                          color: colorText ?? colorScheme.onBackground,
+                          fontSize: sizeText)),
                 ],
               )
             ],

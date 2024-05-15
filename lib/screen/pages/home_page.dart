@@ -25,10 +25,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    final ColorScheme colorScheme = Theme.of(context).colorScheme;
+
     return Scaffold(
-      backgroundColor: Color(0xFFA2D5AB),
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
         title: Image.asset('assets/logo.png', width: 260),
         centerTitle: true,
       ),
@@ -40,8 +40,8 @@ class _MyHomePageState extends State<MyHomePage> {
           const SizedBox(height: 16),
           Expanded(
             child: Container(
-              decoration: const BoxDecoration(
-                color: Colors.white,
+              decoration: BoxDecoration(
+                color: colorScheme.surface,
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(24),
                   topRight: Radius.circular(24),
@@ -52,7 +52,6 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: WidgetTitle(
                       title: 'No results found',
                       size: 20,
-                      color: Color(0xFF595858),
                     ))
                   : WidgetGridView(categoriesDisplay: categoriesDisplay),
             ),
@@ -60,9 +59,10 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: const Color(0xFFf26185),
+        backgroundColor: colorScheme.primary,
         onPressed: () {},
-        child: const Icon(Icons.add, color: Color(0xFFF9F5F4), size: 48),
+        child: Icon(Icons.add, size: 48),
+        tooltip: 'Add task',
       ),
     );
   }
