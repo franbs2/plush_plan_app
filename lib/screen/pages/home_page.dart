@@ -47,7 +47,14 @@ class _MyHomePageState extends State<MyHomePage> {
                   topRight: Radius.circular(24),
                 ),
               ),
-              child: WidgetGridView(categoriesDisplay: categoriesDisplay),
+              child: (categoriesDisplay.isEmpty)
+                  ? Center(
+                      child: WidgetTitle(
+                      title: 'No results found',
+                      size: 20,
+                      color: Color(0xFF595858),
+                    ))
+                  : WidgetGridView(categoriesDisplay: categoriesDisplay),
             ),
           ),
         ],
