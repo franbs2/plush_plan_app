@@ -28,8 +28,10 @@ class AppTheme {
       backgroundColor: colorScheme.primary,
     ),
     textTheme: TextTheme(
-      bodyLarge: TextStyle(color: colorScheme.onSecondary),
-      bodyMedium: TextStyle(color: colorScheme.onBackground),
+      bodyLarge:
+          TextStyle(color: colorScheme.onBackground, fontFamily: 'Poppins'),
+      bodyMedium:
+          TextStyle(color: colorScheme.onBackground, fontFamily: 'Poppins'),
     ),
   );
 }

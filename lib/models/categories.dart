@@ -5,9 +5,11 @@ class Categories {
   final String name;
   final Icon icon;
   final int qntItems = 0;
-  final List<Task>? tasks;
 
-  Categories({required this.name, required this.icon, this.tasks});
+  Categories({
+    required this.name,
+    required this.icon,
+  });
 
   static List<Categories> categories = [
     Categories(

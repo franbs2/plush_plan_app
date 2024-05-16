@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: AppTheme.themeData,
-      home: Task(),
+      home: TaskPage(),
     );
   }
 }
