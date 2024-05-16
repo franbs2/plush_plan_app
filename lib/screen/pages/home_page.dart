@@ -43,8 +43,8 @@ class _MyHomePageState extends State<MyHomePage> {
               decoration: BoxDecoration(
                 color: colorScheme.surface,
                 borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(24),
-                  topRight: Radius.circular(24),
+                  topLeft: Radius.circular(44),
+                  topRight: Radius.circular(44),
                 ),
               ),
               child: (categoriesDisplay.isEmpty)
