@@ -19,19 +19,17 @@ class AppTheme {
 
   static final ThemeData themeData = ThemeData(
     colorScheme: colorScheme,
-    scaffoldBackgroundColor: const Color(0xFFA2D5AB), // Verde Menta
+    scaffoldBackgroundColor: const Color(0xFFA2D5AB),
     appBarTheme: const AppBarTheme(
       backgroundColor: Colors.transparent,
       elevation: 0,
     ),
-
     floatingActionButtonTheme: FloatingActionButtonThemeData(
       backgroundColor: colorScheme.primary,
     ),
-
     textTheme: TextTheme(
-      bodyLarge: TextStyle(color: colorScheme.onSecondary), // Preto Escuro
-      bodyMedium: TextStyle(color: colorScheme.onBackground), // Preto Escuro
+      bodyLarge: TextStyle(color: colorScheme.onSecondary),
+      bodyMedium: TextStyle(color: colorScheme.onBackground),
     ),
   );
 }
