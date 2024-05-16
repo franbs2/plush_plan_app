@@ -1,5 +1,5 @@
 import 'package:app_plush_pan/models/categories.dart';
-import 'package:app_plush_pan/screen/widget/card.dart';
+import 'package:app_plush_pan/views/widget/card.dart';
 import 'package:flutter/material.dart';
 
 class WidgetGridView extends StatelessWidget {

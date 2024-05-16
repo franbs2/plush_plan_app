@@ -1,4 +1,4 @@
-import 'package:app_plush_pan/screen/pages/home_page.dart';
+import 'package:app_plush_pan/views/pages/home_page.dart';
 import 'package:app_plush_pan/style/app_theme.dart';
 import 'package:flutter/material.dart';
 

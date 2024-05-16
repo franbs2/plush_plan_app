@@ -1,7 +1,7 @@
 import 'package:app_plush_pan/models/categories.dart';
-import 'package:app_plush_pan/screen/widget/grid_view.dart';
-import 'package:app_plush_pan/screen/widget/search.dart';
-import 'package:app_plush_pan/screen/widget/title.dart';
+import 'package:app_plush_pan/views/widget/grid_view.dart';
+import 'package:app_plush_pan/views/widget/search.dart';
+import 'package:app_plush_pan/views/widget/title.dart';
 import 'package:flutter/material.dart';
 
 class MyHomePage extends StatefulWidget {
