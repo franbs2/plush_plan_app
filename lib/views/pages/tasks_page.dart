@@ -1,6 +1,4 @@
-import 'package:app_plush_pan/models/categories.dart';
 import 'package:app_plush_pan/models/task.dart';
-import 'package:app_plush_pan/views/widget/grid_view.dart';
 import 'package:app_plush_pan/views/widget/list_view_task.dart';
 import 'package:app_plush_pan/views/widget/search.dart';
 import 'package:app_plush_pan/views/widget/title.dart';
