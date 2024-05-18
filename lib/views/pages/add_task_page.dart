@@ -35,7 +35,6 @@ class _AddTaskPageState extends State<AddTaskPage> {
     Icons.lightbulb_outline,
     Icons.favorite,
     Icons.event,
-    Icons.flag,
     Icons.star,
   ];
 
@@ -152,7 +151,7 @@ class _AddTaskPageState extends State<AddTaskPage> {
             ),
             decoration: InputDecoration(
               filled: true,
-              fillColor: Color(0xFFF26185),
+              fillColor: Theme.of(context).colorScheme.secondaryContainer,
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.all(
                   Radius.circular(24),
@@ -186,6 +185,28 @@ class _AddTaskPageState extends State<AddTaskPage> {
               icon: Icon(listIcon[index]),
               onPressed: () {},
             ),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              ElevatedButton(
+                onPressed: () {},
+                child: Text(
+                  'Add Category',
+                  style: TextStyle(fontSize: 16, color: Colors.white),
+                ),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Theme.of(context).colorScheme.primary,
+                  padding: const EdgeInsets.all(16.0),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(24),
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
       ],
