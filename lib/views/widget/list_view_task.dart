@@ -1,5 +1,4 @@
-import 'package:app_plush_pan/models/task.dart';
-import 'package:app_plush_pan/views/pages/tasks_page.dart';
+import 'package:app_plush_pan/domain/interfaces/models/task/task.dart';
 import 'package:flutter/material.dart';
 
 class WidgetListViewTask extends StatelessWidget {

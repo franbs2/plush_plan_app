@@ -1,9 +1,9 @@
-import 'package:app_plush_pan/models/categories.dart';
+import 'package:app_plush_pan/domain/interfaces/models/category/categories.dart';
 import 'package:app_plush_pan/views/widget/card.dart';
 import 'package:flutter/material.dart';
 
 class WidgetGridView extends StatelessWidget {
-  final List<Categories> categoriesDisplay;
+  final List<Category> categoriesDisplay;
 
   const WidgetGridView({super.key, required this.categoriesDisplay});
 

@@ -1,8 +1,10 @@
-import 'package:app_plush_pan/models/categories.dart';
+import 'package:app_plush_pan/data/mock.dart';
 import 'package:app_plush_pan/views/widget/grid_view.dart';
 import 'package:app_plush_pan/views/widget/search.dart';
 import 'package:app_plush_pan/views/widget/title.dart';
 import 'package:flutter/material.dart';
+
+import '../../domain/interfaces/models/category/categories.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -12,13 +14,13 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  List<Categories> categoriesDisplay = List.from(Categories.categories);
+  List<Category> categoriesDisplay = List.from(mockCategories);
 
   void updateGrid(String value) {
     setState(() {
-      categoriesDisplay = Categories.categories
+      categoriesDisplay = mockCategories
           .where((element) =>
-              element.name.toLowerCase().contains(value.toLowerCase()))
+              element.nameCategory.toLowerCase().contains(value.toLowerCase()))
           .toList();
     });
   }
@@ -42,13 +44,13 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Container(
               decoration: BoxDecoration(
                 color: colorScheme.surface,
-                borderRadius: BorderRadius.only(
+                borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(44),
                   topRight: Radius.circular(44),
                 ),
               ),
               child: (categoriesDisplay.isEmpty)
-                  ? Center(
+                  ? const Center(
                       child: WidgetTitle(
                       title: 'No results found',
                       size: 20,
@@ -61,8 +63,8 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButton: FloatingActionButton(
         backgroundColor: colorScheme.primary,
         onPressed: () {},
-        child: Icon(Icons.add, size: 48),
         tooltip: 'Add task',
+        child: const Icon(Icons.add, size: 48),
       ),
     );
   }

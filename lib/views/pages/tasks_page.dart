@@ -1,4 +1,4 @@
-import 'package:app_plush_pan/models/task.dart';
+import 'package:app_plush_pan/domain/interfaces/models/task/task.dart';
 import 'package:app_plush_pan/views/widget/list_view_task.dart';
 import 'package:app_plush_pan/views/widget/search.dart';
 import 'package:app_plush_pan/views/widget/title.dart';
@@ -43,18 +43,18 @@ class _TaskPageState extends State<TaskPage> {
             child: Container(
               decoration: BoxDecoration(
                 color: colorScheme.surface,
-                borderRadius: BorderRadius.only(
+                borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(44),
                   topRight: Radius.circular(44),
                 ),
               ),
               child: (Task.tasks.isEmpty)
-                  ? Center(
+                  ? const Center(
                       child: WidgetTitle(
                       title: 'Add your first task in +',
                     ))
                   : (tasksDisplay.isEmpty)
-                      ? Center(
+                      ? const Center(
                           child: WidgetTitle(
                           title: 'No results found',
                           size: 20,
@@ -67,8 +67,8 @@ class _TaskPageState extends State<TaskPage> {
       floatingActionButton: FloatingActionButton(
         backgroundColor: colorScheme.primary,
         onPressed: () {},
-        child: Icon(Icons.add, size: 48),
         tooltip: 'Add task',
+        child: const Icon(Icons.add, size: 48),
       ),
     );
   }
